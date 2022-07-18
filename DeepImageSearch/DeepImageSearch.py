@@ -37,7 +37,7 @@ class FeatureExtractor:
         self.model = Model(inputs=base_model.input, outputs=base_model.get_layer('fc1').output)
     def extract(self, img):
         # Resize the image
-        img = img.resize((224, 224))
+        img = img.resize((1800, 3000))
         # Convert the image color space
         img = img.convert('RGB')
         # Reformat the image
